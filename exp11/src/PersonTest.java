@@ -2,7 +2,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class PersonTest {
-    @Test(groups={"unit1","integration"})
+    @Test(groups={"unit1"})
     public void testFirstName(){
         Person firstHuman = new Person();
         Person secondHuman = new Person();
@@ -20,7 +20,7 @@ public class PersonTest {
 
 
     }
-    @Test(groups={"unit1","integration"})
+    @Test(groups={"unit1"})
     public void testLastName(){
         Person firstHuman = new Person();
         Person secondHuman = new Person();
@@ -37,7 +37,7 @@ public class PersonTest {
         assertEquals(thirdHuman.getLastName(), "Scott");
     }
 
-    @Test(groups={"unit1","integration"})
+    @Test(groups={"unit1"})
     public void testPassportId(){
         Person firstHuman = new Person();
         Person secondHuman = new Person();
