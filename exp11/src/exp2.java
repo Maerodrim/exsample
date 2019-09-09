@@ -23,6 +23,19 @@ class Person2 {
         this.passportId=passportId;
         return passportId;
     };
+    public Person2(int passportId){
+        this.passportId=passportId;
+    };
+    public Person2(){
+    }
+    public Person2(String firstName , String lastName){
+        this.firstName=firstName;
+        this.lastName=lastName;
+    }
+    public Person2(String firstName , String lastName , int passportId){
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.passportId=passportId;
+    }
 }
-
 
