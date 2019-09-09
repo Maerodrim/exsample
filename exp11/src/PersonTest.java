@@ -2,34 +2,57 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class PersonTest {
-    @Test
-    public void test(){
+    @Test(groups={"unit1","integration"})
+    public void testFirstName(){
         Person firstHuman = new Person();
         Person secondHuman = new Person();
         Person thirdHuman = new Person();
 
+        assertEquals(firstHuman.getFirstName(), null);
+
         firstHuman.setFirstName("Gans");
-        firstHuman.setLastName("Chylc");
-        firstHuman.setPassportId(236235444);
-
         secondHuman.setFirstName("Katerin");
-        secondHuman.setLastName("Malkin");
-        secondHuman.setPassportId(833534346);
-
         thirdHuman.setFirstName("Piligrim");
-        thirdHuman.setLastName("Scott");
-        thirdHuman.setPassportId(913463494);
 
         assertEquals(firstHuman.getFirstName(), "Gans");
-        assertEquals(firstHuman.getLastName(), "Chylc");
-        assertEquals(firstHuman.getPassportId(), 236235444);
-
         assertEquals(secondHuman.getFirstName(), "Katerin");
-        assertEquals(secondHuman.getLastName(), "Malkin");
-        assertEquals(secondHuman.getPassportId(), 833534346);
-
         assertEquals(thirdHuman.getFirstName(), "Piligrim");
+
+
+    }
+    @Test(groups={"unit1","integration"})
+    public void testLastName(){
+        Person firstHuman = new Person();
+        Person secondHuman = new Person();
+        Person thirdHuman = new Person();
+
+        assertEquals(firstHuman.getLastName(), null);
+
+         firstHuman.setLastName("Chylc");
+        secondHuman.setLastName("Malkin");
+        thirdHuman.setLastName("Scott");
+
+        assertEquals(firstHuman.getLastName(), "Chylc");
+        assertEquals(secondHuman.getLastName(), "Malkin");
         assertEquals(thirdHuman.getLastName(), "Scott");
+    }
+
+    @Test(groups={"unit1","integration"})
+    public void testPassportId(){
+        Person firstHuman = new Person();
+        Person secondHuman = new Person();
+        Person thirdHuman = new Person();
+
+        assertEquals(firstHuman.getPassportId(), 0);
+
+        firstHuman.setPassportId(236235444);
+        secondHuman.setPassportId(833534346);
+        thirdHuman.setPassportId(913463494);
+
+        assertEquals(firstHuman.getPassportId(), 236235444);
+        assertEquals(secondHuman.getPassportId(), 833534346);
         assertEquals(thirdHuman.getPassportId(), 913463494);
     }
+
 }
+
