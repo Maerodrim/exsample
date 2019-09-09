@@ -53,6 +53,19 @@ public class PersonTest {
         assertEquals(secondHuman.getPassportId(), 833534346);
         assertEquals(thirdHuman.getPassportId(), 913463494);
     }
+    @Test(groups={"unit1"})
+    public void testConstrakt(){
+        Person firstHuman = new Person(236235444);
+        Person secondHuman = new Person("Chylc", "Gans");
+        Person thirdHuman = new Person("Chylc", "Gans",236235444);
+
+        assertEquals(firstHuman.getPassportId(), 236235444);
+        assertEquals(secondHuman.getFirstName(), "Chylc");
+        assertEquals(secondHuman.getLastName(), "Gans");
+        assertEquals(thirdHuman.getPassportId(), 236235444);
+        assertEquals(thirdHuman.getFirstName(), "Chylc");
+        assertEquals(thirdHuman.getLastName(), "Gans");
+    }
 
 }
 
