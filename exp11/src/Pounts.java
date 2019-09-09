@@ -9,4 +9,6 @@ public class Pounts {
         return o;}
     public static Point divide(Point a, Point b){ Point o= new Point((a.pointX/b.pointX),(a.pointY/b.pointY),(a.pointZ/b.pointZ));
         return o;}
+    public static Point enlarge(Point a, double b){Point o= new Point((a.pointX*b),(a.pointY*b),(a.pointZ*b));
+        return o;}
 }
