@@ -62,8 +62,4 @@ public class PointsTest {
         assertEquals(Points.vectorProduct(firstPoint, secondPoint).pointX, 0, 0.0001);
         assertEquals(Points.vectorProduct(firstPoint, secondPoint).pointY, 0, 0.0001);
         assertEquals(Points.vectorProduct(firstPoint, secondPoint).pointZ, 0, 0.0001);}
-
-
-
-
 }
