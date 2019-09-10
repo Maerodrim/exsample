@@ -1,5 +1,5 @@
-public class Pounts {
-    private Pounts() {;}
+public class Points {
+    private Points() {;}
     public static Point sum(Point a, Point b){
         return new Point((a.pointX+b.pointX),(a.pointY+b.pointY),(a.pointZ+b.pointZ));}
     public static Point subtract(Point a, Point b){
